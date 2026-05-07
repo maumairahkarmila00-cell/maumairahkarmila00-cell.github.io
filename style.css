@@ -1,0 +1,395 @@
+ @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+*{
+  cursor: url('https://cdn.cursors-4u.net/previews/cute-polka-dotted-red-bow-tie-ribbon-36336bff-32.webp') 16 16, auto !important;
+}
+
+ /* Definisi Warna (Variables) - Senang nak tukar nanti */
+:root {
+    --bg-color: #FDF5E6;       /* Beige/Cream */
+    --text-color: #4A3728;     /* Dark Coffee */
+    --nav-color: #7D8F69;      /* Earthy Green */
+    --accent-color: #E4B1B3;   /* Soft Pink */
+}
+
+body {
+    background-color: var(--bg-color) !important; /* Warna cream asal awak */
+    background-image: url('bg1.jpg') !important; /* Pastikan nama fail betul sebiji */
+    background-repeat: repeat !important;
+    background-attachment: fixed !important;
+    background-size: 300px !important; /* Kita kecilkan corak bunga supaya nampak halus */
+    
+    /* INI TRICK DIA: Kita bagi gambar tu jadi sangat pudar guna opacity */
+    background-blend-mode: multiply !important; 
+    
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--accent-color); /* Warna Soft Pink */
+    text-align: center;
+    padding: 40px 0 !important;
+    color: white;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 90px;
+	margin: 0;
+    color: white; /* Supaya tulisan Nayss Sipss warna putih */
+	text-align: center;
+    padding: 0px;
+    color: white;
+}
+
+nav {
+    background-color: var(--nav-color);
+    padding: 14px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+	font-size: 1.2em !important;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px 0;
+    width: 95% !important;
+    max-width: 1300px;       /* Ini lebar maksimum yang awak mahukan */
+    margin: 0 auto !important; /* Bagi dia duduk tengah */
+    display: block;
+}
+
+main h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem !important; /* Besarkan sikit tajuk halaman */
+    color: var(--nav-color);      /* Guna warna hijau Earthy Green */
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 20px;
+}
+
+.menu-card {
+    background-color: #fff;
+    border-radius: 30px; 
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    padding-bottom: 20px;
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px); 
+}
+
+.menu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 30px 30px 0 0;
+}
+
+.menu-card h4 {
+    margin: 15px 0;
+    font-family: 'Poppins', sans-serif;
+    color: #444;
+}
+
+.price-box {
+    background-color: #f2a900; 
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Hiasan Kotak Info */
+.info-box {
+    background-color: white;
+    padding: 20px 30px !important;           /* Ruang dalam lebih besar supaya nampak mewah[cite: 2] */
+    margin: 15px auto !important; 
+    width: 98% !important;   /* Lebarkan hampir penuh ruang main[cite: 2] */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 10px solid var(--nav-color); /* Tebalkan sikit garis hijau tu[cite: 2] */
+    box-sizing: border-box;
+	text-align: justify;
+	min-height: 0 !important;
+}
+
+.info-box p {
+    font-size: 1.25rem !important; /* Besarkan tulisan penerangan[cite: 2] */
+    line-height: 1.8;
+    color: var(--text-color);
+	margin: 5px 0 !important;
+}
+
+.info-box h3 {
+    font-size: 1.6rem !important; /* Besarkan tajuk macam Sejarah & Waktu Operasi[cite: 2] */
+    margin-bottom: 5px;
+}
+
+/* Kemaskan senarai dalam kotak info */
+.info-box ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.info-box li {
+    font-size: 1.25rem !important; /* Samakan dengan saiz .info-box p awak */
+    line-height: 1.8 !important;   /* Samakan jarak baris */
+    color: var(--text-color) !important;
+    margin-bottom: 20px !important;
+    list-style-type: square; 
+}
+
+/* --- Tambah Kod Ini di Paling Bawah style.css --- */
+
+/* Ini untuk susun gambar dan teks sebelah-menyebelah */
+.profile-flex {
+    display: flex;
+    align-items: center; /* Bagi teks dan gambar duduk tengah secara menegak */
+    gap: 30px;           /* Jarak antara gambar dan teks */
+    flex-wrap: wrap;     /* Supaya kalau buka kat phone, gambar duduk atas teks */
+}
+
+/* INI KOD UNTUK KECILKAN GAMBAR */
+.profile-image img {
+    width: 250px !important;  /* Kita paksa lebar jadi 200px */
+    height: 280px !important; /* Kita paksa tinggi jadi 200px */
+    object-fit: cover;       /* Supaya gambar tak nampak penyek */
+    border-radius: 15%;      /* Buat gambar jadi bentuk bulat (estetik) */
+    border: 3px solid var(--accent-color); /* Garis pink keliling gambar */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Bayang sikit */
+}
+
+/* Ini untuk bahagian teks di sebelah gambar */
+.profile-details {
+    flex: 1;             /* Teks akan ambil ruang yang selebihnya */
+    min-width: 250px;    /* Saiz minimum teks sebelum dia turun bawah gambar */
+}
+
+/* --- Tambah di paling bawah style.css --- */
+/* Susunan gambar luar kotak */
+
+.profile-outer-container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important; /* Paksa tinggi sama rata */
+    width: 98% !important;
+    max-width: 1380px !important;
+    margin: 20px auto !important;
+    gap: 20px !important;
+    flex-wrap: nowrap !important;   /* Larang sama sekali gambar jatuh bawah */
+    box-sizing: border-box !important;
+}
+
+.profile-box-custom {
+    flex: 1 1 60% !important;       /* Kotak teks ambil 60% ruang sahaja */
+    padding: 30px 30px !important;
+    margin: 0 !important;
+    background-color: white !important;
+    border-radius: 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    height: 450px !important;        /* Tetapkan tinggi tetap */
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+.image-outside {
+    flex: 1.5 !important;       /* Gambar ambil 40% ruang[cite: 3] */
+    height: 450px !important;        /* Samakan dengan kotak teks[cite: 4] */
+    display: flex !important;
+}
+
+.image-outside img {
+    width: 100% !important;
+    height: 100% !important;        /* Paksa gambar ikut tinggi kotak[cite: 4] */
+    object-fit: cover !important;   /* Supaya gambar pengusaha tak penyek[cite: 4] */
+    border-radius: 15px !important;
+    border: 5px solid white !important;
+    box-sizing: border-box !important;
+}
+
+footer {
+    background-color: rgba(253, 245, 230, 0.9) !important;
+    padding: 10px !important;
+    margin-top: 50px !important;
+    border-radius: 15px 15px 0 0; /* Bulatkan bucu atas sahaja */
+    text-align: center;
+    color: var(--text-color) !important;
+    font-weight: bold;
+}
+
+/* --- BAR SLOGAN MEMANJANG PENUH --- */
+.slogan-bar {
+    background-color: rgba(253, 245, 230, 0.9) !important; /* Warna cream pekat sikit */
+    width: 100vw !important;        /* Guna vw supaya dia ikut lebar skrin laptop */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw !important;  /* Trick untuk bagi dia keluar dari container main */
+    margin-right: -50vw !important;
+	margin-bottom: 50px !important;
+	margin-top: 30px !important;
+    padding:20x 0 !important;     /* Besarkan ruang supaya nampak eksklusif */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-top: 2px solid rgba(0,0,0,0.05);
+    border-bottom: 2px solid rgba(0,0,0,0.05);
+}
+
+.slogan-bar h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 3.0rem !important;    /* Besarkan lagi tulisan slogan */
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* --- BAR TAJUK SETIAP PAGE (VERSI RAPAT) --- */
+.page-title-bar {
+    background-color: rgba(253, 245, 230, 0.9) !important;
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    
+    /* RESET MARGIN: Kita kosongkan margin supaya dia rapat atas & bawah */
+    margin-top: 15px !important;
+    margin-bottom: 30px !important;
+    
+    padding: 20px 0 !important; /* Kekalkan ruang dalam supaya bar nampak tinggi sikit */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.page-title-bar h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 3.0rem !important;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* --- ANIMATED CSS GALLERY --- */
+.gallery-container {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin: 20px 0 !important; /* Jarak atas & bawah bar tajuk */
+    padding: 0 !important;
+    /* JANGAN letak margin-left negatif atau vw kat sini */
+}
+
+.slider {
+    width: 95% !important; /* Biar dia lebar sikit tapi tak langgar tepi */
+    max-width: 1200px !important; /* Samakan dengan lebar kotak putih awak */
+    height: 500px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    border-radius: 15px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+.slides {
+    display: flex !important;
+    /* 8 gambar x 100% = 800% */
+    width: 800% !important; 
+    height: 100% !important;
+    /* Kita panjangkan masa ke 35s supaya 7 gambar tak tukar terlalu laju */
+    animation: slide-animation 35s infinite !important; 
+}
+
+.slide {
+    /* 100% dibahagi 8 gambar = 12.5% */
+    width: 12.5% !important; 
+    height: 100% !important;
+}
+
+.slide img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+/* Logik pergerakan gambar */
+@keyframes slide-animation {
+    /* 0% ke 12.5% (Gambar 1) */
+    0% { transform: translateX(0%); }
+    12.5% { transform: translateX(0%); }
+    
+    /* Gerak ke Gambar 2 (12.5%) */
+    14% { transform: translateX(-12.5%); }
+    26.5% { transform: translateX(-12.5%); }
+    
+    /* Gerak ke Gambar 3 (25%) */
+    28% { transform: translateX(-25%); }
+    40.5% { transform: translateX(-25%); }
+    
+    /* Gerak ke Gambar 4 (37.5%) */
+    42% { transform: translateX(-37.5%); }
+    54.5% { transform: translateX(-37.5%); }
+    
+    /* Gerak ke Gambar 5 (50%) */
+    56% { transform: translateX(-50%); }
+    68.5% { transform: translateX(-50%); }
+    
+    /* Gerak ke Gambar 6 (62.5%) */
+    70% { transform: translateX(-62.5%); }
+    82.5% { transform: translateX(-62.5%); }
+    
+    /* Gerak ke Gambar 7 (75%) */
+    84% { transform: translateX(-75%); }
+    96.5% { transform: translateX(-75%); }
+    
+    /* Balik ke Gambar Extra (87.5%) */
+    100% { transform: translateX(-87.5%); }
+}
+}
